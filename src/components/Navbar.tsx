@@ -68,8 +68,8 @@ const Navbar: React.FC = () => {
             />
             <span className="font-serif font-bold text-xl md:text-2xl tracking-tight">
               <span className="text-white">Rise</span>
-              <span className="text-gold-400"> Wine</span>
-              <span className="text-white"> & Spirits</span>
+              <span className="text-gold-400"> Spirits</span>
+              <span className="text-white"> & wine</span>
             </span>
           </Link>
 

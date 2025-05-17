@@ -62,7 +62,7 @@ const AboutPage: React.FC = () => {
           <div className="text-white max-w-2xl">
             <h1 className="font-serif text-5xl mb-6">Our Story</h1>
             <p className="text-lg">
-              Rise Wine & Spirits was founded with a simple mission: to bring the finest selection of wines, 
+              Rise Spirits & Wine was founded with a simple mission: to bring the finest selection of wines, 
               spirits, and ready-to-drink cocktails to the Hattiesburg community.
             </p>
           </div>

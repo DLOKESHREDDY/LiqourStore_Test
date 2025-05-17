@@ -39,7 +39,7 @@ const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<{ text: string; sender: 'user' | 'bot' }[]>([
     { 
-      text: "Hello! Welcome to Rise Wine & Spirits. How can I help you today? You can ask about our products or select a category below.", 
+      text: "Hello! Welcome to Rise Spirits & Wine. How can I help you today? You can ask about our products or select a category below.", 
       sender: 'bot' 
     }
   ]);
@@ -74,7 +74,7 @@ const ChatBot: React.FC = () => {
     setMessages(prev => [...prev, { text: input, sender: 'user' }]);
     
     const lowerInput = input.toLowerCase();
-    let botResponse = "I'm sorry, I don't have that information. For specific questions about our products, please visit our store in Hattiesburg or contact us at Risewinspirits@gmail.com.";
+    let botResponse = "I'm sorry, I don't have that information. For specific questions about our products, please visit our store in Hattiesburg or contact us at Risespiritswine@gmail.com.";
     
     if (lowerInput.includes('products') || lowerInput.includes('what') || lowerInput.includes('available')) {
       setShowCategories(true);

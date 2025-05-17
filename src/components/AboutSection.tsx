@@ -21,11 +21,11 @@ const AboutSection: React.FC = () => {
           
           <div className="md:w-1/2">
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Welcome to Rise Wine & Spirits, your premier destination for a wide selection of premium liquor, wine, and ready-to-drink cocktails in the Hattiesburg area.
+              Welcome to Rise Spirits & Wine, your premier destination for a wide selection of premium liquor, wine, and ready-to-drink cocktails in the Hattiesburg area.
             </p>
             
             <p className="text-gray-700 mb-6 leading-relaxed">
-              At Rise Wine & Spirits, we specialize in offering a curated collection of products such as allocated liquor, bourbon, brandy, and champagne, along with unique finds like Japanese whiskey, moonshine, and sake.
+              At Rise Spirits & Wine, we specialize in offering a curated collection of products such as allocated liquor, bourbon, brandy, and champagne, along with unique finds like Japanese whiskey, moonshine, and sake.
             </p>
             
             <p className="text-gray-700 mb-6 leading-relaxed">

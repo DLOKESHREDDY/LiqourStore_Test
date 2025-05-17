@@ -26,7 +26,7 @@ const AgeVerification: React.FC<AgeVerificationProps> = ({ onVerify }) => {
         <h2 className="text-2xl font-serif text-burgundy-900 mb-4">Age Verification</h2>
         
         <p className="text-gray-700 mb-8">
-          Welcome to Rise Wine & Spirits. You must be 18 years or older to enter this website.
+          Welcome to Rise Spirits & Wine. You must be 18 years or older to enter this website.
         </p>
         
         {error && (
