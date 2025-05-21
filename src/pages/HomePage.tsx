@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from '../components/Carousel';
 import AboutSection from '../components/AboutSection';
 import ProductHighlights from '../components/ProductHighlights';
+import SpecialOffer from '../components/SpecialOffer';
 
 const HomePage: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage: React.FC = () => {
       <Carousel />
       <AboutSection />
       <ProductHighlights />
+      <SpecialOffer />
     </div>
   );
 };
