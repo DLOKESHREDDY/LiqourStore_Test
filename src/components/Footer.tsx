@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Wine, Mail, Clock, MapPin, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -11,6 +12,10 @@ const Footer: React.FC = () => {
     { day: 'Saturday', hours: '10:00 AM - 10:00 PM' },
     { day: 'Sunday', hours: 'Closed' }
   ];
+
+  const handleAddressClick = () => {
+    window.open('https://www.google.com/maps/place/6375+US-98+%2330,+Hattiesburg,+MS+39402', '_blank');
+  };
 
   return (
     <footer id="contact" className="bg-gray-900 text-gray-300">
@@ -33,17 +38,23 @@ const Footer: React.FC = () => {
             
             <div className="flex items-center mb-4">
               <Mail className="mr-3 text-burgundy-500" size={18} />
-              <span>Risewinspirits@gmail.com</span>
+              <a href="mailto:risespiritswine@gmail.com" className="hover:text-gold-400 transition duration-300">
+                risespiritswine@gmail.com
+              </a>
             </div>
             
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 cursor-pointer" onClick={handleAddressClick}>
               <MapPin className="mr-3 text-burgundy-500" size={18} />
-              <span>Hattiesburg, MS</span>
+              <span className="hover:text-gold-400 transition duration-300">
+                6375 Hwy98 W, Suite 30, Hattiesburg, MS, 39402
+              </span>
             </div>
             
             <div className="flex items-center">
               <Phone className="mr-3 text-burgundy-500" size={18} />
-              <span>(555) 123-4567</span>
+              <a href="tel:+16013366867" className="hover:text-gold-400 transition duration-300">
+                (601) 336-6867
+              </a>
             </div>
           </div>
           
@@ -71,16 +82,21 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-serif text-xl text-white mb-6">Site Navigation</h3>
             <ul className="space-y-3">
-              {['Home', 'About', 'Gallery', 'Services', 'Newest Arrivals', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href={`#${item.toLowerCase()}`} 
-                    className="hover:text-gold-400 transition duration-300"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="hover:text-gold-400 transition duration-300">Home</Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-gold-400 transition duration-300">About</Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="hover:text-gold-400 transition duration-300">Gallery</Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-gold-400 transition duration-300">Services</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-gold-400 transition duration-300">Contact</Link>
+              </li>
             </ul>
           </div>
           

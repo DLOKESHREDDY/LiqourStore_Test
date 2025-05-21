@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   useEffect(() => {
@@ -25,24 +25,11 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (isHomePage) {
-      e.preventDefault();
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: { name: string; href: string }) => {
     e.preventDefault();
-    if (link.name === 'Contact') {
-      handleContactClick(e);
-    } else {
-      navigate(link.href);
-      window.scrollTo(0, 0);
-    }
+    navigate(link.href);
+    window.scrollTo(0, 0);
+    setIsMenuOpen(false);
   };
 
   const isHomePage = location.pathname === '/';
@@ -113,10 +100,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                onClick={(e) => {
-                  handleNavClick(e, link);
-                  setIsMenuOpen(false);
-                }}
+                onClick={(e) => handleNavClick(e, link)}
                 className={`block px-6 py-4 text-lg transition-colors duration-300 ${
                   location.pathname === link.href 
                     ? 'bg-burgundy-800 text-gold-400' 

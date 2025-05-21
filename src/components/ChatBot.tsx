@@ -46,6 +46,10 @@ const ChatBot: React.FC = () => {
   const [input, setInput] = useState('');
   const [showCategories, setShowCategories] = useState(true);
 
+  const handleAddressClick = () => {
+    window.open('https://www.google.com/maps/place/6375+US-98+%2330,+Hattiesburg,+MS+39402', '_blank');
+  };
+
   const toggleChat = () => {
     setIsOpen(!isOpen);
   };
@@ -74,15 +78,16 @@ const ChatBot: React.FC = () => {
     setMessages(prev => [...prev, { text: input, sender: 'user' }]);
     
     const lowerInput = input.toLowerCase();
-    let botResponse = "I'm sorry, I don't have that information. For specific questions about our products, please visit our store in Hattiesburg or contact us at Risespiritswine@gmail.com.";
+    let botResponse = "I'm sorry, I don't have that information. For specific questions about our products, please visit our store in Hattiesburg or contact us at risespiritswine@gmail.com.";
     
     if (lowerInput.includes('products') || lowerInput.includes('what') || lowerInput.includes('available')) {
       setShowCategories(true);
       botResponse = "Please select a category below to see our available products:";
     } else if (lowerInput.includes('hours') || lowerInput.includes('open')) {
       botResponse = "We're open Monday-Thursday from 10AM-9PM, and Friday-Saturday from 10AM-10PM. We're closed on Sundays.";
-    } else if (lowerInput.includes('location') || lowerInput.includes('where')) {
-      botResponse = "We're located in Hattiesburg, MS. For exact directions, please call us at (555) 123-4567.";
+    } else if (lowerInput.includes('location') || lowerInput.includes('where') || lowerInput.includes('address')) {
+      botResponse = "We're located at 6375 Hwy98 W, Suite 30, Hattiesburg, MS, 39402. Click here to view on Google Maps.";
+      setTimeout(() => handleAddressClick(), 1000);
     }
     
     setTimeout(() => {

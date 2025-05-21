@@ -12,7 +12,7 @@ const AgeVerification: React.FC<AgeVerificationProps> = ({ onVerify }) => {
     if (verified) {
       onVerify(true);
     } else {
-      setError("We're sorry, but you must be at least 18 years old to enter this site.");
+      setError("We're sorry, but you must be at least 21 years old to enter this site.");
     }
   };
 
@@ -26,7 +26,7 @@ const AgeVerification: React.FC<AgeVerificationProps> = ({ onVerify }) => {
         <h2 className="text-2xl font-serif text-burgundy-900 mb-4">Age Verification</h2>
         
         <p className="text-gray-700 mb-8">
-          Welcome to Rise Spirits & Wine. You must be 18 years or older to enter this website.
+          Welcome to Rise Spirits & Wine. You must be 21 years or older to enter this website.
         </p>
         
         {error && (
@@ -40,14 +40,14 @@ const AgeVerification: React.FC<AgeVerificationProps> = ({ onVerify }) => {
             onClick={() => handleVerify(true)}
             className="flex-1 bg-burgundy-600 text-white py-3 px-6 rounded-md hover:bg-burgundy-700 transition duration-300"
           >
-            I am 18 or older
+            I am 21 or older
           </button>
           
           <button
             onClick={() => handleVerify(false)}
             className="flex-1 bg-gray-200 text-gray-700 py-3 px-6 rounded-md hover:bg-gray-300 transition duration-300"
           >
-            I am under 18
+            I am under 21
           </button>
         </div>
       </div>
