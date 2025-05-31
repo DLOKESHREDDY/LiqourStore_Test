@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --burgundy-50: #fdf2f4;
+  --burgundy-100: #fce7eb;
+  --burgundy-200: #f8d0d9;
+  --burgundy-300: #f2aabf;
+  --burgundy-400: #e9799e;
+  --burgundy-500: #db537f;
+  --burgundy-600: #c42f60;
+  --burgundy-700: #a42450;
+  --burgundy-800: #882244;
+  --burgundy-900: #7D2E46;
+  
+  --gold-50: #fdfbec;
+  --gold-100: #fcf7d3;
+  --gold-200: #f8eda6;
+  --gold-300: #f4df73;
+  --gold-400: #eece3f;
+  --gold-500: #e1ba2a;
+  --gold-600: #C3A343;
+  --gold-700: #a2791c;
+  --gold-800: #85601e;
+  --gold-900: #724e1f;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Animation utilities */
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
